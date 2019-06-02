@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ItemsViewerFilter Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./dist/bundle.js"></script>
+
+    <div class="filterContainer">
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var $filterContainer = $('.filterContainer');
+            $filterContainer.itemsViewerFilter({
+                filter: {
+                    title: "Фильтр без названия",           //Название фильтра. Отображается на переключателе (опционально в заголовке окна)
+                    width: "580px",                         //Ширина панели фильтра
+                    showHeader: false,                      //Флаг отображения названия в хейдере
+                    showSearchUri: true,                    //Флаг показа итоговой searchUri после применения фильтра
+                    encodeSearchUri: true,                  //Флаг кодировки searchUri
+                    apiUrl: "http://localhost:3000",
+                    buttons: {
+                        apply: 'Применить',                 //Кнопка применения настроек фильтра
+                        cancel: 'Сбросить'                  //Кнопка сброса настроек фильтра
+                    },
+                    //getResult: function(data) {             //Функция принимающая массив с установками фильтрации
+                    //    console.log('result', data)         //Позволяет провести необходимую обработку данных
+                    //}
+                },
+                inputs: [
+                    {
+                        label: 'Текстовый ввод',
+                        name: 'textfield',
+                        type: 'text',
+                        data: []
+                    },
+                    {
+                        label: 'Одиночный выбор',
+                        name: 'singleVariant',
+                        type: 'single',
+                        data: [{
+                                name: 'var1',
+                                label: 'Вариант 1'
+                            },
+                            {
+                                name: 'var2',
+                                label: 'Вариант 2',
+                            }
+                        ],
+                    },
+                    {
+                        label: 'Множественный выбор',
+                        name: 'multipleVariants',
+                        type: 'multiple',
+                        data: [],
+                        fetchDataUrl: '/getSingleVariants'
+                    },
+                    {
+                        label: 'Select',
+                        name: 'selectInput',
+                        type: 'select',
+                        data: [],
+                        fetchDataUrl: '/getModelsByDeviceType',
+                        processInputData: function (data) {
+                            var result = Object.keys(data).map((key, index) => {
+                                return {
+                                    text: key,
+                                    children: data[key].map((child, index) => {
+                                        return {
+                                            id: child,
+                                            text: child
+                                        }
+                                    })
+                                }
+                            });
+                            return result;
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+</body>
+
+</html>

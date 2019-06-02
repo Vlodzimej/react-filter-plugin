@@ -1,0 +1,182 @@
+{
+	"posts": [{
+		"id": 1,
+		"title": "json-server",
+		"author": "typicode"
+	}],
+	"comments": [{
+		"id": 1,
+		"body": "some comment",
+		"postId": 1
+	}],
+	"profile": {
+		"name": "typicode"
+	},
+	"getSingleVariants": [{
+			"name": "NVR",
+			"label": "NVR"
+		},
+		{
+			"name": "VA_SERVER",
+			"label": "VA"
+		},
+		{
+			"name": "VMS_SERVER",
+			"label": "VS"
+		},
+		{
+			"name": "VIDEO_CODER",
+			"label": "Видеокодер"
+		},
+		{
+			"name": "NETWORK_CAMERA",
+			"label": "Камера"
+		},
+		{
+			"name": "IO_MODULE",
+			"label": "Модуль ввода/вывода"
+		}
+	],
+
+
+	"getModelsByDeviceType": {
+		"NVR": ["NVR"],
+		"VA_SERVER": ["VA"],
+		"VMS_SERVER": ["VS"],
+		"VIDEO_CODER": ["VS/virtualCoder", "M7014", "M7016", "P7214", "P7216", "Q7401", "VideoCoder", "Videocoder 1.0"],
+		"NETWORK_CAMERA": ["M1011", "M1013", "M1054", "M1065-L", "M3025-VE", "M5525-E", "P1355", "P1364", "P1364-E", "P1365-E-MKII", "P1365-MKII", "P3301", "P3344", "P3364-V", "P3375-LV", "P3375-LVE", "P3375-V", "P5534", "P5635-EMKII", "Q6055-E", "VAPIX3", "VideoCamera", "Camera 1.0"],
+		"IO_MODULE": ["UNIVERSAL"]
+	},
+	"getAllParents": {
+		"object": [{
+			"id": "2Ki2yxIYa0CuS910FZ3lbp",
+			"deviceType": "NVR",
+			"name": "ALGONT NVR - 001E67A7F271",
+			"address": "video.vs1.develop",
+			"brand": "ALGONT",
+			"model": "NVR",
+			"userInfo": {
+				"login": "",
+				"password": ""
+			},
+			"enabled": true,
+			"description": "",
+			"parentId": null
+		}, {
+			"id": "WictfeAKduUdbdbqR3Uvd",
+			"deviceType": "VA_SERVER",
+			"name": "ALGONT VA - 001E67A7F271",
+			"address": "video.vs1.develop",
+			"brand": "ALGONT",
+			"model": "VA",
+			"userInfo": {
+				"login": "",
+				"password": ""
+			},
+			"enabled": true,
+			"description": "",
+			"parentId": null
+		}, {
+			"id": "6TzgKiihUQ92R44tpVTbLs",
+			"deviceType": "VMS_SERVER",
+			"name": "ALGONT VS - 001E67A7F271",
+			"address": "video.vs1.develop",
+			"brand": "ALGONT",
+			"model": "VS",
+			"userInfo": {
+				"login": "",
+				"password": ""
+			},
+			"enabled": true,
+			"description": "",
+			"parentId": null
+		}, {
+			"id": "3mGIyYe3BHwUDwOgF4ofNk",
+			"deviceType": "VA_SERVER",
+			"name": "ssss",
+			"address": "video.develop1",
+			"brand": "ALGONT",
+			"model": "VA",
+			"userInfo": {
+				"login": "",
+				"password": ""
+			},
+			"enabled": true,
+			"description": "ddd",
+			"parentId": null
+		}, {
+			"id": "4n7By7JDWCWl1C4KRT2LM3",
+			"deviceType": "NVR",
+			"name": "Видеоустройство",
+			"address": null,
+			"brand": "ALGONT",
+			"model": "NVR",
+			"userInfo": {
+				"login": null,
+				"password": null
+			},
+			"enabled": true,
+			"description": null,
+			"parentId": null
+		}, {
+			"id": "6e93neZ8C1JRKqj3m9Hipv",
+			"deviceType": "VMS_SERVER",
+			"name": "Видеоустройство (1)",
+			"address": null,
+			"brand": "ALGONT",
+			"model": "VS",
+			"userInfo": {
+				"login": null,
+				"password": null
+			},
+			"enabled": true,
+			"description": null,
+			"parentId": null
+		}, {
+			"id": "54aa7atCwr77LlveQvRT5l",
+			"deviceType": "VMS_SERVER",
+			"name": "Видеоустройство (2)",
+			"address": null,
+			"brand": "ALGONT",
+			"model": "VS",
+			"userInfo": {
+				"login": null,
+				"password": null
+			},
+			"enabled": true,
+			"description": null,
+			"parentId": null
+		}, {
+			"id": "2mSq8evvo1fAtM0i0YZyc5",
+			"deviceType": "VMS_SERVER",
+			"name": "Видеоустройство (6)",
+			"address": null,
+			"brand": "ALGONT",
+			"model": "VS",
+			"userInfo": {
+				"login": null,
+				"password": null
+			},
+			"enabled": true,
+			"description": null,
+			"parentId": null
+		}, {
+			"id": "7IuC5RowUrdBsLQtW4fRjH",
+			"deviceType": "VMS_SERVER",
+			"name": "Видеоустройство (8)",
+			"address": null,
+			"brand": "ALGONT",
+			"model": "VS",
+			"userInfo": {
+				"login": null,
+				"password": null
+			},
+			"enabled": true,
+			"description": null,
+			"parentId": null
+		}],
+		"objects": {},
+		"success": true,
+		"message": "OK"
+	}
+}
