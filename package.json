@@ -21,13 +21,13 @@
     "select2": "^4.0.6-rc.1"
   },
   "devDependencies": {
-    "ava": "0.15.2",
+    "ava": "5.1.0",
     "babel": "6.5.2",
     "babel-eslint": "6.0.4",
     "babel-plugin-transform-es2015-destructuring": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
-    "babelify": "7.3.0",
+    "babelify": "10.0.0",
     "browser-env": "^3.2.6",
     "browser-sync": "2.12.12",
     "css-loader": "^2.1.1",
